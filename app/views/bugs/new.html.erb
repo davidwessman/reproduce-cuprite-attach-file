@@ -1,0 +1,8 @@
+<%= form_with(model: @bug, url: bugs_path) do |form| %>
+  <%= form.file_field(:file) %>
+  <%= form.submit %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "flash #{key}") %>
+<% end %>

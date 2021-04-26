@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources(:bugs, only: %i[create new])
+  root(action: :new, controller: :bugs)
 end
